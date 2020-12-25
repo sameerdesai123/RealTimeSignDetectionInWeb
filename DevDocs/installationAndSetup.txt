@@ -1,0 +1,13 @@
+Install Anaconda3-2019.07
+Install C++ Build tools (Tensorflow needs it)
+Install protoc library (Data exchange format used by tf) and set env path
+Clone tf Model garden 
+Go inside models/research => Run "protoc object_detection/protos/*.proto --python_out=."
+			     Run "cp object_detection/packages/tf2/setup.py ."
+		     	     Run "python -m pip install ."
+----------------------------------------------------------------------------------------
+
+	importing tensorflow and object detection libraries worked.
+
+----------------------------------------------------------------------------------------
+
