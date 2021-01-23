@@ -11,3 +11,10 @@ Go inside models/research => Run "protoc object_detection/protos/*.proto --pytho
 
 ----------------------------------------------------------------------------------------
 
+Install tensorflowjs to avail tensorflowjs_converter :
+	conda create -n tfjs python=3.6
+	conda activate tfjs
+	python -m pip intall tensorflowjs
+	python -m pip install numpy==1.19.3
+
+Then run the converter command printed inside tutorial.ipynb -> this will generate the tfjs compatable json model
