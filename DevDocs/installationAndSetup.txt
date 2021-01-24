@@ -1,0 +1,20 @@
+Install Anaconda3-2019.07
+Install C++ Build tools (Tensorflow needs it)
+Install protoc library (Data exchange format used by tf) and set env path
+Clone tf Model garden 
+Go inside models/research => Run "protoc object_detection/protos/*.proto --python_out=."
+			     Run "cp object_detection/packages/tf2/setup.py ."
+		     	     Run "python -m pip install ."
+----------------------------------------------------------------------------------------
+
+	importing tensorflow and object detection libraries worked.
+
+----------------------------------------------------------------------------------------
+
+Install tensorflowjs to avail tensorflowjs_converter :
+	conda create -n tfjs python=3.6
+	conda activate tfjs
+	python -m pip intall tensorflowjs
+	python -m pip install numpy==1.19.3
+
+Then run the converter command printed inside tutorial.ipynb -> this will generate the tfjs compatable json model

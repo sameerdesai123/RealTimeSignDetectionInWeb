@@ -1,0 +1,7 @@
+Tensorflow/workspace/images
+Tensorflow/workspace/models
+Tensorflow/workspace/pre-trained-models
+Tensorflow/models
+*.jpg
+*.png
+.ipynb_checkpoints
