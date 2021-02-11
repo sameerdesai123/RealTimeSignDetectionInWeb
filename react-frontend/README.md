@@ -79,4 +79,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 4. Setup routes and bootstrap DONE
 5. Create two pages doc and home DONE
 6. Enable routing and add activeClassName for differentiation DONE
-7. 
+7. Create a free tier storage on ibm cloud
+8. install ibmcloud cli
+9. run commands:
+
+    ibmcloud login
+    ibmcloud plugin install cloud-object-storage
+    ibmcloud target -r jp-tok
+
+10. Create corsconfig.json file
+11. Add cors config to your bucket
+
+    ibmcloud cos bucket-cors-put --bucket tfjs-real-time-model-sign-detection --cors-configuration file://corsconfig.json
+
+12. Install react-webcam package
+
+    "react-webcam": "^5.2.0"
+
+13. 
