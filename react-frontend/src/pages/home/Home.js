@@ -19,13 +19,16 @@ const Home = () => {
   const runCoco = async () => {
     // 3. TODO - Load network 
     // e.g. const net = await cocossd.load();
+    
     // https://tfjs-real-time-model-sign-detection.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json
+    
+    // FOR REF https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json
     const net = await tf.loadGraphModel('https://tfjs-real-time-model-sign-detection.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
     
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 16.7);
+    }, 20);
   };
 
   const detect = async (net) => {
@@ -57,17 +60,26 @@ const Home = () => {
       // console.log(obj)
 
       try{
-        const boxes = await obj[1].array()
-        const classes = await obj[2].array()
-        const scores = await obj[4].array()
+        const boxes = await obj[0].array()
+        const classes = await obj[1].array()
+        const scores = await obj[3].array()
         
-        console.log(scores);
+        
+        // let i = 0;
+        // for(i=0;i<8;i++) {
+        //   var temp = await obj[i].array();
+        //   console.log("Index: ", i, temp[0]);
+        //   console.log();
+        // }
+        // console.log(scores);
+        
+        
         // Draw mesh
         const ctx = canvasRef.current.getContext("2d");
           // 5. TODO - Update drawing utility
         // drawSomething(obj, ctx)  
-        requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.2, videoWidth, videoHeight, ctx)}); 
-        await nextFrame()
+        requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.7, videoWidth, videoHeight, ctx)}); 
+        // await nextFrame()
         tf.dispose(img)
         tf.dispose(resized)
         tf.dispose(casted)
@@ -87,68 +99,22 @@ const Home = () => {
   useEffect(()=>{runCoco()});
 
   return (
-<<<<<<< HEAD
-    <div className="d-flex left-align">
-      <Container>
-        <div className="w-50 p-50 mt-5 ml-10 border-right">
-        <Webcam
-          ref={webcamRef}
-          muted={true} 
-          style={{
-            position: "relative",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
+    <div >
+     <section className="main">
+          <div className="container">
+            <div className="row mt-5">
+              <div className="col-sm-8 float-left border-right mt-1 br-3">
 
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "relative",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 8,
-            width: 640,
-            height: 480,
-          }}
-        />
-        </div>
-        <div className="w-50 mt-5 border-right">
-          <h1>Statistics</h1>
-        </div>
-      </Container>
-=======
-    <div>
-      <section class="main">
-          <div class="container">
-            <div class="row mt-5">
-              <div class="col-sm-8 float-left border-right mt-1 br-3">
-      
-                <div class="float-left w-100">
-                  {/* <div class="display-4">Live WebCam 
-                    <div class="float-right">
-                      <button onclick="start()" type="button" class="btn btn-outline-success">Start</button>&nbsp;
-                      <button onclick="stop()" type="button" class="btn btn-outline-danger">Stop</button>
-                    </div>
-                  </div> */}
+                <div className="float-left w-100">
 
                     <div className="display-4 justify-content-center">
                       Live Webcam
-                      <div class="float-right">
-                      <button onclick="start()" type="button" class="btn btn-outline-success">Start</button>&nbsp;
-                      <button onclick="stop()" type="button" class="btn btn-outline-danger">Stop</button>
+                      <div className="float-right">
+                      <button onclick="start()" type="button" className="btn btn-outline-success">Start</button>&nbsp;
+                      <button onclick="stop()" type="button" className="btn btn-outline-danger">Stop</button>
                     </div>
                     </div>  
-                  <div class="justify-content-center w-100">
+                  <div className="justify-content-center w-100">
                     <div className="b-1">
                           <Webcam
                             className="mt-2"
@@ -189,13 +155,13 @@ const Home = () => {
                 </div>
 
               </div>
-              <div class="col-sm-4 float-right">
-                
-              <div class="float-left w-100">
-                <div class="display-4">
+              <div className="col-sm-4 float-right">
+
+              <div className="float-left w-100">
+                <div className="display-4">
                   Prediction 
-                  <div class="float-right">
-                    <button onclick="predict()" type="button" class="btn btn-outline-primary">Predict</button>
+                  <div className="float-right">
+                    <button onclick="predict()" type="button" className="btn btn-outline-primary">Predict</button>
                   </div>
                 </div>
                 <div className="mt-5">
@@ -210,7 +176,6 @@ const Home = () => {
             </div>
           </div>
       </section>
->>>>>>> 52125870f08f150511c7aa6b813d55c49a3bef98
     </div>
   );
 }

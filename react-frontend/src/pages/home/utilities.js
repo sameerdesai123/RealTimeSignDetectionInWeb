@@ -14,6 +14,9 @@ const labelMap = {
 
 export const drawRect = (boxes, classes, scores, threshold, imgWidth, imgHeight, ctx)=>{
     for(let i=0; i<=boxes.length; i++){
+        if(i%10 === 0) {
+            //console.log("BOXES: ", boxes[i],"CLASSES: ", classes[i],"SCORE : ", scores[i]);
+        }
         if(boxes[i] && classes[i] && scores[i]>threshold){
             // Extract variables
             const [y,x,height,width] = boxes[i]
