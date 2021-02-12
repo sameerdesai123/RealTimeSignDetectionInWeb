@@ -9,6 +9,7 @@ import { nextFrame } from "@tensorflow/tfjs";
 // 2. TODO - Import drawing utility here
 // e.g. import { drawRect } from "./utilities";
 import {drawRect} from "./utilities"; 
+import { Container } from 'react-bootstrap';
 
 const Home = () => {
   const webcamRef = useRef(null);
@@ -24,7 +25,7 @@ const Home = () => {
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 10);
+    }, 16.7);
   };
 
   const detect = async (net) => {
@@ -66,7 +67,7 @@ const Home = () => {
           // 5. TODO - Update drawing utility
         // drawSomething(obj, ctx)  
         requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.2, videoWidth, videoHeight, ctx)}); 
-        await tf.nextFrame()
+        await nextFrame()
         tf.dispose(img)
         tf.dispose(resized)
         tf.dispose(casted)
@@ -86,13 +87,14 @@ const Home = () => {
   useEffect(()=>{runCoco()});
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="d-flex left-align">
+      <Container>
+        <div className="w-50 p-50 mt-5 ml-10 border-right">
         <Webcam
           ref={webcamRef}
           muted={true} 
           style={{
-            position: "absolute",
+            position: "relative",
             marginLeft: "auto",
             marginRight: "auto",
             left: 0,
@@ -107,7 +109,7 @@ const Home = () => {
         <canvas
           ref={canvasRef}
           style={{
-            position: "absolute",
+            position: "relative",
             marginLeft: "auto",
             marginRight: "auto",
             left: 0,
@@ -118,7 +120,11 @@ const Home = () => {
             height: 480,
           }}
         />
-      </header>
+        </div>
+        <div className="w-50 mt-5 border-right">
+          <h1>Statistics</h1>
+        </div>
+      </Container>
     </div>
   );
 }

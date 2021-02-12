@@ -1,0 +1,26 @@
+<annotation>
+	<folder>VJIT</folder>
+	<filename>VJIT.596abf40-6aad-11eb-bfec-ac11be106261.jpg</filename>
+	<path>C:\D\Projects\MiniProject\Tensorflow\workspace\images\collectedimages\VJIT\VJIT.596abf40-6aad-11eb-bfec-ac11be106261.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Vidya Jyothi Institute Of Technology</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>158</xmin>
+			<ymin>288</ymin>
+			<xmax>251</xmax>
+			<ymax>480</ymax>
+		</bndbox>
+	</object>
+</annotation>

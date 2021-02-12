@@ -1,0 +1,26 @@
+<annotation>
+	<folder>BestOfLuck</folder>
+	<filename>BestOfLuck.0fc39f1e-6aaf-11eb-a027-ac11be106261.jpg</filename>
+	<path>C:\D\Projects\MiniProject\Tensorflow\workspace\images\collectedimages\BestOfLuck\BestOfLuck.0fc39f1e-6aaf-11eb-a027-ac11be106261.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Best Of Luck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>279</xmin>
+			<ymin>220</ymin>
+			<xmax>382</xmax>
+			<ymax>380</ymax>
+		</bndbox>
+	</object>
+</annotation>

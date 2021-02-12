@@ -1,0 +1,26 @@
+<annotation>
+	<folder>More</folder>
+	<filename>More.48941674-6aae-11eb-b211-ac11be106261.jpg</filename>
+	<path>C:\D\Projects\MiniProject\Tensorflow\workspace\images\collectedimages\More\More.48941674-6aae-11eb-b211-ac11be106261.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>More</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>298</xmin>
+			<ymin>300</ymin>
+			<xmax>510</xmax>
+			<ymax>367</ymax>
+		</bndbox>
+	</object>
+</annotation>

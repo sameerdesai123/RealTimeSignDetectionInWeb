@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Home</folder>
+	<filename>Home.2d78f1f6-6ab0-11eb-a6d3-ac11be106261.jpg</filename>
+	<path>C:\D\Projects\MiniProject\Tensorflow\workspace\images\collectedimages\Home\Home.2d78f1f6-6ab0-11eb-a6d3-ac11be106261.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Home</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>62</xmin>
+			<ymin>172</ymin>
+			<xmax>315</xmax>
+			<ymax>327</ymax>
+		</bndbox>
+	</object>
+</annotation>

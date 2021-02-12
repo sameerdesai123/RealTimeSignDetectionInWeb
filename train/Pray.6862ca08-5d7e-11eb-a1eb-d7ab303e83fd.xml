@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Pray</folder>
+	<filename>Pray.6862ca08-5d7e-11eb-a1eb-d7ab303e83fd.jpg</filename>
+	<path>C:\D\Projects\MiniProject\Tensorflow\workspace\images\collectedimages\Pray\Pray.6862ca08-5d7e-11eb-a1eb-d7ab303e83fd.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Pray</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>296</xmin>
+			<ymin>99</ymin>
+			<xmax>549</xmax>
+			<ymax>381</ymax>
+		</bndbox>
+	</object>
+</annotation>
