@@ -1,14 +1,12 @@
 import './Doc.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Doc() {
+const Doc =  () => {
   return (
     <div className="Doc">
-      <header className="Doc-header">
-        <p>
-          Doc
-        </p>
-      </header>
+      
+      <h1>Doc</h1>
+
     </div>
   );
 }

@@ -87,6 +87,7 @@ const Home = () => {
   useEffect(()=>{runCoco()});
 
   return (
+<<<<<<< HEAD
     <div className="d-flex left-align">
       <Container>
         <div className="w-50 p-50 mt-5 ml-10 border-right">
@@ -125,6 +126,91 @@ const Home = () => {
           <h1>Statistics</h1>
         </div>
       </Container>
+=======
+    <div>
+      <section class="main">
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-sm-8 float-left border-right mt-1 br-3">
+      
+                <div class="float-left w-100">
+                  {/* <div class="display-4">Live WebCam 
+                    <div class="float-right">
+                      <button onclick="start()" type="button" class="btn btn-outline-success">Start</button>&nbsp;
+                      <button onclick="stop()" type="button" class="btn btn-outline-danger">Stop</button>
+                    </div>
+                  </div> */}
+
+                    <div className="display-4 justify-content-center">
+                      Live Webcam
+                      <div class="float-right">
+                      <button onclick="start()" type="button" class="btn btn-outline-success">Start</button>&nbsp;
+                      <button onclick="stop()" type="button" class="btn btn-outline-danger">Stop</button>
+                    </div>
+                    </div>  
+                  <div class="justify-content-center w-100">
+                    <div className="b-1">
+                          <Webcam
+                            className="mt-2"
+                            ref={webcamRef}
+                            muted={true} 
+                            style={{
+                              position: "absolute",
+                              marginLeft: "auto",
+                              marginRight: "auto",
+                              marginTop: "auto",
+                              left: 0,
+                              right: 0,
+                              textAlign: "center",
+                              zindex: 9,
+                              width: 640,
+                              height: 480,
+                            }}
+                          />
+
+                          <canvas
+                            ref={canvasRef}
+                            style={{
+                              position: "absolute",
+                              marginLeft: "auto",
+                              marginRight: "auto",
+                              marginTop: "auto",
+                              left: 0,
+                              right: 0,
+                              textAlign: "center",
+                              zindex: 8,
+                              width: 640,
+                              height: 480,
+                            }}
+                          />
+                        </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-4 float-right">
+                
+              <div class="float-left w-100">
+                <div class="display-4">
+                  Prediction 
+                  <div class="float-right">
+                    <button onclick="predict()" type="button" class="btn btn-outline-primary">Predict</button>
+                  </div>
+                </div>
+                <div className="mt-5">
+                  <p>Detected Class : </p>
+                  <p>Detected Class : </p>
+                  <p>Detected Class : </p>
+                  <p>Detected Class : </p>
+                  <p>Detected Class : </p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </section>
+>>>>>>> 52125870f08f150511c7aa6b813d55c49a3bef98
     </div>
   );
 }
