@@ -1,10 +1,8 @@
+Tensorflow/models
 Tensorflow/workspace/images
 Tensorflow/workspace/models
 Tensorflow/workspace/pre-trained-models
 Tensorflow/models
 test
 train
-*.jpg
-*.xml
-*.png
 .ipynb_checkpoints

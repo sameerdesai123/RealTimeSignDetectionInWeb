@@ -28,16 +28,11 @@ const Home = () => {
 
   // Main function
   const runCoco = async () => {
-    // 3. TODO - Load network 
-    // e.g. const net = await cocossd.load();
-    
+
     // https://tfjs-real-time-model-sign-detection.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json
-    
     // FOR REF https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json
     
     const net = await tf.loadGraphModel('https://tfjs-real-time-model-sign-detection.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
-     // setNetState(net)
-    // stopLoader()
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
@@ -47,11 +42,10 @@ const Home = () => {
   const detect = async (net) => {
     // Check data is available
     if (typeof webcamRef.current === "undefined" || webcamRef.current !== null) {
-        startLoader()      
+        startLoader()
     }
     if (typeof webcamRef.current !== "undefined" && webcamRef.current !== null && webcamRef.current.video.readyState === 4) {
       // Get Video Properties
-
       stopLoader()
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
@@ -77,28 +71,18 @@ const Home = () => {
         const boxes = await obj[5].array()
         const classes = await obj[2].array()
         const scores = await obj[6].array()
-        
-        
-        // let i = 0;
-        // for(i=0;i<8;i++) {
-        //   var temp = await obj[i].array();
-        //   console.log("Index: ", i, temp[0]);
-        //   console.log();
-        // }
-        // console.log(scores);
-        
-        
+
         // Draw mesh
         const ctx = canvasRef.current.getContext("2d");
-          // 5. TODO - Update drawing utility
-        // drawSomething(obj, ctx)  
+
         requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.75, videoWidth, videoHeight, ctx)}); 
-        // await nextFrame()
+
         tf.dispose(img)
         tf.dispose(resized)
         tf.dispose(casted)
         tf.dispose(expanded)
         tf.dispose(obj)
+
       }catch(e){
         tf.dispose(img)
         tf.dispose(resized)
