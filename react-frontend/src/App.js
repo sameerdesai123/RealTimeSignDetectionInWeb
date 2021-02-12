@@ -15,14 +15,10 @@ const App = () => {
         <Container className="border-bottom">        
             <Nav className="justify-content-center border-top" activeKey="/home">
               <Nav.Item>
-                <Nav.Link>
-                  <NavLink to="/" activeClassName="font-weight-light" >Home</NavLink>
-                </Nav.Link>
+                <NavLink to="/" activeClassName="font-weight-light p-3" >Home</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link>
-                  <NavLink to="/doc" activeClassName="font-weight-light">Documentation</NavLink>
-                </Nav.Link>
+                <NavLink to="/doc" activeClassName="font-weight-light p-3">Documentation</NavLink> 
               </Nav.Item>
             </Nav>      
         </Container>
