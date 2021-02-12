@@ -28,7 +28,7 @@ const Home = () => {
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 20);
+    }, 10);
   };
 
   const detect = async (net) => {
@@ -57,12 +57,12 @@ const Home = () => {
       const casted = resized.cast('int32')
       const expanded = casted.expandDims(0)
       const obj = await net.executeAsync(expanded)
-      // console.log(obj)
+      console.log(obj)
 
       try{
-        const boxes = await obj[0].array()
-        const classes = await obj[1].array()
-        const scores = await obj[3].array()
+        const boxes = await obj[5].array()
+        const classes = await obj[2].array()
+        const scores = await obj[6].array()
         
         
         // let i = 0;
@@ -78,7 +78,7 @@ const Home = () => {
         const ctx = canvasRef.current.getContext("2d");
           // 5. TODO - Update drawing utility
         // drawSomething(obj, ctx)  
-        requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.7, videoWidth, videoHeight, ctx)}); 
+        requestAnimationFrame(()=>{drawRect(boxes[0], classes[0], scores[0], 0.6, videoWidth, videoHeight, ctx)}); 
         // await nextFrame()
         tf.dispose(img)
         tf.dispose(resized)
@@ -121,7 +121,7 @@ const Home = () => {
                             ref={webcamRef}
                             muted={true} 
                             style={{
-                              position: "absolute",
+                              position: "relative",
                               marginLeft: "auto",
                               marginRight: "auto",
                               marginTop: "auto",
