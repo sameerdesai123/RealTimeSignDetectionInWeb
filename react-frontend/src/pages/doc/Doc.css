@@ -10,183 +10,22 @@
       padding-bottom: 50px;
   }
 
-  h4{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    padding-top: 30px;
-    padding-bottom: 50px;
-  }
-
   h3 {
         color: black;
         text-align: center;
         font-weight: bold;
         font-family: sans-serif;
-        padding-top: 150px;
+        padding-top: 30px;
         padding-bottom: 20px;
   }
-
-
-  /* TimeLine */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
-* {
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-   }
-
-   html {
-       font-family: "Montserrat";
-   }
-
-   .container {
-       
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       background-color: white;
-   }
-
-   .timeline {
-       width: 80%;
-       height: auto;
-       max-width: 800px;
-       margin: 0 auto;
-       position: relative;
-   }
-
-   .timeline ul {
-       list-style: none;
-   }
-
-   .timeline ul li {
-       padding: 20px;
-       background-color: #006098;
-       border-radius: 10px;
-       margin-bottom: 20px;
-   }
-
-   .timeline ul li:last-child {
-       margin-bottom: 0;
-   }
-
-   .timeline-content h6 {
-       font-size: 18px;
-       line-height: 30px;
-       font-weight: 300;
-       color: white;
-   }
-
-   .timeline-content h3 {
-       font-size: 13px;
-       font-weight: bolder;
-       color: #006098;
-   }
-
-   .timeline-content .date {
-       font-size: 12px;
-       font-weight: 300;
-       margin-bottom: 10px;
-       letter-spacing: 2px;
-   }
-   
-   .timelinebutton{
-       padding-bottom: 50px;
-   }
-
-   .tbutton{
-     margin-bottom: 28px;
-     width: 200px;
-     height: 75px;
-     background: rgb(175, 125, 17);
-     border: none;
-     border-radius: 10px;
-     color: whitesmoke;
-     cursor: pointer;
-     transition: 0.2s;
-     justify-content: center;
-     font-weight: bold;
-     font-size: 20px;
- }
-
- .tbutton:hover,.tbutton:focus{
-     background: rgb(231, 205, 153);
-     color: #006098;
-     font-weight: bold;
-     transition: 0.2s;
- }
-
-   @media only screen and (min-width: 768px) {
-   .timeline:before {
-       content: "";
-       position: absolute;
-       top: 0;
-       left: 50%;
-       transform: translateX(-50%);
-       width: 2px;
-       height: 100%;
-       background-color: gray;
-   }
-
-   .timeline ul li {
-       width: 50%;
-       position: relative;
-       margin-bottom: 50px;
-   }
-
-   .timeline ul li:nth-child(odd) {
-       float: left;
-       clear: right;
-       transform: translateX(-30px);
-       border-radius: 20px 0px 20px 20px;
-   }
-
-   .timeline ul li:nth-child(even) {
-       float: right;
-       clear: left;
-       transform: translateX(30px);
-       border-radius: 0px 20px 20px 20px;
-   }
-
-   .timeline ul li::before {
-       content: "";
-       position: absolute;
-       height: 20px;
-       width: 20px;
-       border-radius: 50%;
-       background-color: #006098;
-       top: 0px;
-   }
-
-   .timeline ul li:nth-child(odd)::before {
-       transform: translate(50%, -50%);
-       right: -30px;
-   }
-
-   .timeline ul li:nth-child(even)::before {
-       transform: translate(-50%, -50%);
-       left: -30px;
-   }
-
-   .timeline-content .date {
-       position: absolute;
-       top: -30px;
-   }
-   
-   .timeline ul li:hover::before {
-       background-color: rgb(196, 37, 37);
-   }
-} 
-
-    /* Table */
+ 
+    /* Signs Table */
 
 
   .content-table {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
+    font-size: 1.0em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -208,11 +47,18 @@
   
   .content-table th,
   .content-table td {
-    padding: 12px 15px;
+    padding: 12px 15px;   
   }
-  
+
+  .content-table th:nth-of-type(2),
+  .content-table td:nth-of-type(2) {
+    border-right: 2.5px solid #006098;
+  }
+
   .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
+    text-align: center;
+    font-weight: bold;
   }
   
   .content-table tbody tr:nth-of-type(even) {

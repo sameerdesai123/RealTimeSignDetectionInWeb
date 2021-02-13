@@ -12,81 +12,29 @@ import Remember from './DocImages/Remember.jpg';
 import ThankYou from './DocImages/ThankYou.jpg';
 import VJIT from './DocImages/VJIT.jpg';
 
+
 const Doc =  () => {
   return (
     <div className="Doc">
-      
-      <h1>About App</h1>
-      <h4>Procedure</h4> 
-      <div class="container">
-                <div class="timeline">
-                    <ul>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Setup Path Contants</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Create Label Map</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Create TF Records</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Download TF Models Pretrained Models from Tensorflow Model Zoo</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Download ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Copy Model Config into training folder</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Update Config For Transfer Learning</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Train The Model</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Load Trained Model From Checkpointl</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Detect in Real-Time</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Install tensorflow.js to convert h5 to json (Done in VE tfjs)</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-content">
-                                <h6>Upload the model to IBM Cloud Storage bucket</h6>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
+    
+      <h3>Procedure</h3> 
 
-        <h3>Symbols Used</h3> 
+      <p><b>Prerequisits:</b>
+      <br></br>Install Anaconda3-2019.07 <a href={'https://www.anaconda.com/products/individual'}>Download</a>
+      <br></br>Install C++ Build tools <a href={'https://visualstudio.microsoft.com/vs/community/'}>Download</a>
+      <br></br>Install protoc library <a href={'https://github.com/protocolbuffers/protobuf/releases'}>Download</a>
+      </p>
+
+      <p><b>Setting up environment: </b>
+      <br></br>
+      Go inside models/research
+      <br></br>Run "protoc object_detection/protos/*.proto --python_out=."
+      <br></br>Run "cp object_detection/packages/tf2/setup.py ."
+      <br></br>Run "python -m pip install ."
+      </p>
+      
+
+      <h3>Symbols Used</h3> 
 
         <table className="content-table">
           <thead>
@@ -152,7 +100,7 @@ const Doc =  () => {
               <td>
                 <img src={VJIT} alt="VJIT" width="128" height="128"/>
               </td>
-              <td>Vidya Jyothi Institute of Techonology</td>
+              <td>Vidya Jyothi Institute<br></br>of Techonology</td>
               <td></td>
               <td></td>
             </tr>
